@@ -1,0 +1,156 @@
+html, body {
+    font-style: normal;
+    font-family: sans-serif;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.task-form{
+    background-color: #b798bb!important;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-item{
+    color: white!important;
+}
+
+.jumbotron {
+    height: 350px;
+    background-size: 100% auto;
+    background-position: center top;
+}
+
+.form-signin {
+    background-color: white;
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 80px;
+    border-radius: 10px;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.note-toolbar.panel-heading{
+    background-color: #ccd6e8; border: none
+}
+
+.first-template{
+    background-color: #E8EAEC;
+}
+
+.first-template-content{
+    padding: 100px;
+}
+
+.dropdown-item:hover{
+    display: inline-block;
+    background: lightskyblue !important;
+}
+
+.btn.btn-dark{
+    background-color: #265e7f !important;
+}
+
+/*img{*/
+    /*max-width: 50%; max-height: 50%;*/
+/*}*/
+
+.error{
+    margin-top: 5px;
+    font-style: normal;
+    font-family: sans-serif;
+    background: #edd2ce;
+}
+
+.form-container{
+    border-top: 2px solid #3C8DBC;margin-bottom: 90px;background-color:#FFFFFF;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.choose-button {
+    width: 180px;
+    height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    font: 14px/50px Tahoma;
+    transition: all 0.18s ease-in-out;
+    color: white;
+    background: linear-gradient(to right, #f46b45, #eea849);
+}
+
+.chous-label:hover {
+    color: white;
+    background-position: bottom left;
+}
+
+.image-input {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.image{
+    /*border: solid 2px grey;*/
+    max-width: 30%; max-height: 30%;
+}
+.fading{
+    margin-top: 5px;
+    font-style: normal;
+    font-family: sans-serif;
+    background: #edd2ce;
+}
+
+.type-layouts{
+    max-height: 300px;
+    margin-bottom: 10px;
+    overflow:scroll;
+}
+.list-layouts:hover{
+    background: #3C8DBC;
+}
