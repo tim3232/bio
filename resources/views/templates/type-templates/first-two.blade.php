@@ -4,6 +4,7 @@
 <head>
     <title>Test</title>
     @include('layouts.chank.header')
+    <link href="/css/layout.css" rel="stylesheet">
 </head>
 
 <body>

@@ -35,7 +35,7 @@ class PopulateLayoutsTable extends Migration
 
             'type' => 'first',
             'description' => 'картинка слева текст справа',
-            'name' => 'first-two',
+            'name' => 'first-one',
             'image' => 'layout3.png',
 
         ]);
