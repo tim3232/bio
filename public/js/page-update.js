@@ -3,14 +3,20 @@ $(document).ready(function() {
     $(".description").summernote();
 });
 
-$('.input-show-select').on('click',function () {
+var inputWhichSelectLayout = $('.input-show-select');
+
+inputWhichSelectLayout.on('click',function () {
     $('.type-layouts').show();
 });
 
-$('li').on('click',function () {
+$('li').on('mousedown',function () {
     $('.input-show-select').val($(this).attr('value'));
     $('.type-layouts').hide();
     $('.layout_id').val($(this).attr('id'));
+});
+
+inputWhichSelectLayout.bind('blur', function(){
+    $('ul').hide();
 });
 
 
