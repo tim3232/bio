@@ -19,6 +19,13 @@ class PopulateUsersTable extends Migration
             'name' => 'admin',
             'password' => Hash::make(12345678),
         ]);
+
+        DB::table('users')->insert([
+
+            'email' => 'user@gmail.com',
+            'name' => 'user',
+            'password' => Hash::make(12345678),
+        ]);
     }
 
     /**

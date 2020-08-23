@@ -34,7 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('users', 'MainController@users')->name('users');
 
     /*SAVE SELECTED TEMPLATE IN ADMIN PAGE*/
-    Route::post('{slug}/save_filter', 'MainController@update_template')->name('save-filter-page');
+    Route::post('{slug}/update_template', 'MainController@update_template')->name('update-template');
     /*DELETE PAGE*/
     Route::get('user/{id}/delete', 'MainController@delete_user')->name('delete-user');
 
@@ -52,6 +52,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     /*DELETE PAGE*/
     Route::get('delete/{slug}', 'MainController@delete_page')->name('delete-page');
+
+    /*ADD VIDEO TO PAGE*/
+    Route::post('{slug}/video', 'MainController@video')->name('add-video');
+    Route::get('{slug}/video', 'MainController@changeStatusVideo')->name('status-video');
 
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 });

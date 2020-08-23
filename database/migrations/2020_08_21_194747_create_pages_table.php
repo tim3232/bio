@@ -16,14 +16,19 @@ class CreatePagesTable extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('slug');
-            $table->string('title')->nullable();
-            $table->integer('layout_id');
-            $table->integer('template_id');
+            $table->string('title');
+            $table->unsignedBigInteger('layout_id');
+            $table->unsignedBigInteger('template_id');
             $table->text('description')->nullable();
             $table->text('text')->nullable();
-            $table->string('body_image')->nullable();
-            $table->string('image')->nullable();
+            $table->string('body_image');
+            $table->string('image');
+            $table->string('youtube')->nullable();
+            $table->integer('video_status')->nullable();
             $table->timestamps();
+
+            $table->foreign('layout_id')->references('id')->on('layouts');
+            $table->foreign('template_id')->references('id')->on('templates');
         });
     }
 

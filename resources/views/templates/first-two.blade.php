@@ -19,6 +19,13 @@
             <div class="col-md-12 text-center">{!! $info->text !!}</div>
             <div class="col-md-12">{!! $info->description !!}</div>
         </div>
+
+        @if($info->video_status == 1)
+            <div class="col-md-12 text-center" style="margin-top: 20px">
+                @youtube($info->youtube, ['width'=>560, 'height'=>315])
+            </div>
+        @endif
+
     </div>
 </div>
 

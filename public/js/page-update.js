@@ -3,23 +3,6 @@ $(document).ready(function() {
     $(".description").summernote();
 });
 
-var inputWhichSelectLayout = $('.input-show-select');
-
-inputWhichSelectLayout.on('click',function () {
-    $('.type-layouts').show();
-});
-
-$('li').on('mousedown',function () {
-    $('.input-show-select').val($(this).attr('value'));
-    $('.type-layouts').hide();
-    $('.layout_id').val($(this).attr('id'));
-});
-
-inputWhichSelectLayout.bind('blur', function(){
-    $('ul').hide();
-});
-
-
 function loadImage(event) {
 
     var valInputImage  = event.target.value;
@@ -53,6 +36,16 @@ function cancelImage(event){
 
 }
 
+$(function () {
+    $('.select-layout').selectpicker();
+
+});
+
+$(".select-layout").on("change",function () {
+    var selectedOption = $(".select-layout option:selected");
+    var layout_id = selectedOption.attr('data-layout');
+    $('.layout_id').val(layout_id);
+});
 
 $(".form-submit").on("submit", function (e) {
     e.preventDefault();

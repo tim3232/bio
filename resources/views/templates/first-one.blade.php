@@ -19,15 +19,24 @@
             </div>
             <div class="col-md main-image">
                 <div class="desc">
-                    <div class="titls" style="position: relative; left: 0">
+                    <div class="title">
                         {!! $info->title !!}
                     </div>
+
+                    <div class="col-md-12">{!! $info->text !!}</div>
 
                     <div class="main-content__desc col-md" style="padding-left: 0">
                         {!! $info->description !!}
                     </div>
                 </div>
             </div>
+
+            @if($info->video_status == 1)
+                <div class="col-md-12 text-center" style="margin-top: 20px">
+                    @youtube($info->youtube, ['width'=>560, 'height'=>315])
+                </div>
+            @endif
+
         </div>
     </div>
 </div>

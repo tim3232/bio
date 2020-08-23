@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Layout;
 use App\Page;
 use App\Template;
 use App\User;
@@ -15,7 +16,9 @@ class MainController extends Controller
     {
         $page = $page->all();
         $templates = $template->all();
-        return view('admin',['pages' => $page, 'templates' => $templates]);
+        $layouts = Layout::all();
+
+        return view('admin',['pages' => $page, 'templates' => $templates,'layouts' => $layouts]);
     }
 
     public function form(Template $template){
@@ -32,7 +35,7 @@ class MainController extends Controller
             $layout = $info->pageHasLayout->name;
 
             if($info){
-                return view('templates.type-templates.'.$layout,['info' => $info]);
+                return view('templates.'.$layout,['info' => $info]);
             }
 
             abort('404');
@@ -55,32 +58,29 @@ class MainController extends Controller
 
     public function change_form(Request $request,Template $template){
 
-
         $templates = $template->all();
         $changedTemplate = $templates->where('id',$request->template_id)->first();
 
         $layouts = $changedTemplate->layoutsByThisTemplate;
-            return view('form-create',['layouts' => $layouts, 'templates' => $templates, 'changedTemplate' => $changedTemplate]);
+            return view('form-template',['layouts' => $layouts, 'templates' => $templates, 'changedTemplate' => $changedTemplate]);
     }
 
     public function change_template($slug, Page $page,Request $request, Template $template){
 
         $info = $page->findBySlug($slug);
-
         $templates = $template->all();
         $changedTemplate = $templates->where('id',$request->template_id)->first();
         $layouts = $changedTemplate->layoutsByThisTemplate;
 
         if($info){
-            return view('edit-update',['info' => $info, 'layouts' => $layouts, 'templates' => $templates, 'changedTemplate' => $changedTemplate]);
+            return view('edit-template',['info' => $info, 'layouts' => $layouts, 'templates' => $templates, 'changedTemplate' => $changedTemplate]);
         }
 
         abort('404');
     }
 
     public function update_template(Request $request, $slug,Page $page){
-        $info = $page->findBySlug($slug);
-        $info->update(['template_id' =>  $request->template_id]);
+        $page->findBySlug($slug)->update($request->all());
         return back();
     }
 
@@ -134,34 +134,51 @@ class MainController extends Controller
                 $request->file('body_image')->move('images', $request->file('body_image')->getClientOriginalName());
             }
 
-            return redirect()->route('wow-page',['slug' => $slug]);
+            return redirect()->route('wow-page',['slug' => $request->slug]);
 
     }
 
 
-    public function users(){
+    public function users(User $user){
         $userId = Auth::id();
-        $users = User::where('id','!=',$userId)->get();
+        $users = $user->where('id','!=',$userId)->get();
         return view('user',['users' => $users]);
     }
 
-    public function add_user($id){
-        User::find($id)->update(['role' => 'admin']);
+    public function add_user($id, User $user){
+        $user->find($id)->update(['role' => 'admin']);
         return back();
     }
 
-    public function delete_page($slug){
-
-        $page = Page::findBySlug($slug);
-        $page->delete();
+    public function delete_page($slug, Page $page){
+        $page->findBySlug($slug)->delete();
         return back();
     }
 
-    public function delete_user($id){
+    public function delete_user($id, User $user){
+        $user->find($id)->update(['role' => null]);
+        return back();
+    }
 
-        $user = User::find($id);
-        $user->role = '';
-        $user->save();
+    public function video(Request $request, $slug, Page $page){
+        $page->findBySlug($slug)->update($request->all());
+        return back();
+    }
+
+    public function changeStatusVideo(Page $page, $slug){
+        $page = $page->findBySlug($slug);
+        $statusVideo = $page->video_status;
+
+        switch ($statusVideo){
+            case 0: $page->video_status = 1;
+
+            break;
+
+            case 1: $page->video_status = 0;
+                break;
+        }
+
+        $page->save();
         return back();
     }
 

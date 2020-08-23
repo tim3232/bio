@@ -15,7 +15,6 @@
     min-height: 120vh;
     position: relative;
     background: url('/images/pre-sale-bg.png') 50% no-repeat; background-size: cover;
-    /*background: url(landing/bg.png) 50% no-repeat; background-size: cover;*/
     padding-top: 56px;
     padding-bottom: 40px;
 }
@@ -46,15 +45,11 @@ strong {
 
     .desc ul li {
         font-size: 18px !important;
-        /*padding-left: 0 !important;*/
     }
 
     ul {
         padding:0 !important;
     }
-    /*.desc p {*/
-    /*font-size: 20px !important;*/
-    /*}*/
 }
 
 
@@ -71,10 +66,7 @@ strong {
 
 .btn-telegram{
     font-size: 18px;
-    /* transition: .3s ease-in-out; */
     justify-content: space-between;
-    /* cursor: pointer; */
-    /* outline: none; */
     padding: 4px 0 8px;
     color: #f3e7e7 !important;
     border: none;
@@ -84,10 +76,7 @@ strong {
 }
 .btn-viber{
     font-size: 18px;
-    /* transition: .3s ease-in-out; */
     justify-content: space-between;
-    /* cursor: pointer; */
-    /* outline: none; */
     padding: 4px 0 8px;
     color: #f3e7e7 !important;
     border: none;
@@ -98,10 +87,7 @@ strong {
 
 .btn-messenger{
     font-size: 18px;
-    /* transition: .3s ease-in-out; */
     justify-content: space-between;
-    /* cursor: pointer; */
-    /* outline: none; */
     padding: 4px 0 8px;
     color: #f3e7e7 !important;
     border: none;
@@ -124,7 +110,6 @@ strong {
     padding-left: 30px;
     font-family: 'Fira Sans', sans-serif;
     font-size: 20px !important;
-    /*font-weight: 400;*/
     color: #000;
     padding-top: 10px;
     position: relative;

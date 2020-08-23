@@ -10,6 +10,7 @@
         <input type="text" name="slug" class="form-control slug" value="{{isset($info->slug) ? $info->slug: ''}}">
         <p id="slug" class="error text-center" style="display: none">Fill the field slug!</p>
         <div class="fading text-center" style="display: none">This slug exists</div>
+        <label id="firstName-error" class="error" for="slug"></label>
     </div>
 </div>
 
@@ -17,6 +18,7 @@
     <label for="description">Description:</label>
     <textarea name="description" class="form-control description" id="description">{{isset($info->description) ? $info->description: null}}</textarea>
     <p id="description" class="error text-center" style="display: none">Fill the field description!</p>
+    <label id="firstName-error" class="error" for="description"></label>
 </div>
 
 <div class="form-group">

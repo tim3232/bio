@@ -1,9 +1,15 @@
 @extends('adminlte::page')
 @section('plugins.Datatables', true)
-   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 @section('css')
     <link href="/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 @stop
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+@section('js')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+@stop
+
 @section('title', 'Users | Lara Admin')
 
 @section('content_header')
@@ -13,7 +19,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="box">
                 <div class="box-header">
                 </div>
@@ -25,7 +31,9 @@
                             <th>Slug</th>
                             <th>Details</th>
                             <th>Current template</th>
-                            <th>Change template</th>
+                            <th>Change layout</th>
+                            <th>Add video</th>
+                            <th>Status video</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -40,33 +48,58 @@
                                         <a href="{{route('delete-page',['slug' => $page->slug])}}" class="btn btn-danger text-center">Delete</a>
                                 </td>
 
-                                <th>
-                                    <span class="font-weight-bold">{{$page->templates->name}}</span>
-                                </th>
                                 <td>
-                                    {{--@php($templates = ['basic','first'])--}}
-                                    <form action="{{route('save-filter-page',['slug' => $page->slug])}}" method="post">
-                                    {{ csrf_field() }}
-                                        <input type="hidden" name="template_id" class="template_id">
-                                    <div class="dropdown float-left">
-                                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton{{$page->id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                           Select template
-                                        </button>
-                                      <div class="dropdown-menu">
-                                        @foreach($templates as $template)
-                                            @if($template->id!= $page->tempate_idl)
-                                                <a href="#" data-attribute="{{$template->id}}" id="{{$page->id}}" class="dropdown-item" name="{{$template->name}}">{{$template->name}}</a>
-                                            @else
-                                                <a href="#" data-attribute="{{$template->id}}" id="{{$page->id}}" class="dropdown-item active" name="{{$template->name}}">{{$template->name}}</a>
-                                              @endif
-                                        @endforeach
-                                      </div>
+                                    <span>{{$page->templates->name}}</span>
+                                </td>
+                                <td>
 
-                                    </div>
+                                    <form action="{{route('update-template',['slug' => $page->slug])}}" method="post">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="template_id" class="template_id" id="{{$page->id}}">
+                                        <input type="hidden" name="layout_id" class="layout_id" id="{{$page->id}}">
 
-                                        <button id="{{$page->id}}" class="btn btn-info text-center float-right save" type="submit" disabled>Save</button>
+                                            <select id="{{$page->id}}" class="my-select show-tick col-md-7" data-live-search="true" data-style="btn-info">
+                                                @foreach($layouts as $layout)
+                                                    <option id="{{$layout->getTemplate->first()->id}}" title="{{$layout->getTemplate->first()->name}}" data-layout="{{$layout->id}}" {{ ($layout->id == $page->pageHasLayout->id ? "selected":"") }}>{{$layout->description}}</option>
+                                                @endforeach
+                                            </select>
+
+                                        <button id="{{$page->id}}" class="btn btn-primary text-center float-right save" type="submit" disabled>Save</button>
                                     </form>
 
+                                </td>
+                                <td>
+
+                                    <button id="{{$page->id}}" class="btn btn-info text-center" data-toggle="modal" data-target="#exampleModalCenter{{$page->id}}">Add</button>
+                                    <form method="post" action="{{route('add-video',['slug' => $page->slug])}}">
+                                        {{ csrf_field() }}
+                                        <div id="exampleModalCenter{{$page->id}}" class="modal fade" role="dialog">
+                                            <div class="modal-dialog">
+
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <span>Copy link to input</span>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <input type="text" name="youtube" placeholder="Link video" class="form-control" required>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button id="{{$page->id}}" class="btn btn-info text-center" type="submit">Save</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td>
+                                    @if($page->video_status == 0)
+                                            @php($status = 'On')
+                                        @else
+                                            @php($status = 'Off')
+                                    @endif
+                                    <a href="{{route('status-video',['slug' => $page->slug])}}" id="{{$page->id}}" class="btn btn-success text-center" role="button">{{$status}}</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -75,9 +108,9 @@
                     </table>
                 </div>
             </div>
-            <!-- /.box -->
+
         </div>
-        <!-- /.col -->
+
     </div>
 
     <script>
@@ -90,14 +123,19 @@
                 "autoWidth": false});
 
         });
+        $(function () {
+            $('.my-select').selectpicker();
+        });
 
-        $('a.dropdown-item').on('click',function () {
-
-            var id = $(this).attr('id');
+        $(".my-select").on("change",function () {
+            var id = this.id;
+            var selectedOption = $(".my-select#"+id+" option:selected");
+            var layout_id = selectedOption.attr('data-layout');
+            var template_id = selectedOption.attr('id');
+            $('#'+id+'.template_id').val(template_id);
+            $('#'+id+'.layout_id').val(layout_id);
             $('#'+id+'.save').prop("disabled", false);
-            var value = $(this).attr('name');
-            $('.template_id').val($(this).attr('data-attribute'));
-            $('#dropdownMenuButton'+id+'').html(value);
-        })
+        });
+
     </script>
 @stop

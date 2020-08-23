@@ -22,20 +22,15 @@ class PopulateLayoutTemplatesTable extends Migration
         DB::table('layout_templates')->insert([
 
             'template_id' => 2,
-            'layout_id' => 3
+            'layout_id' => 2
         ]);
 
         DB::table('layout_templates')->insert([
 
             'template_id' => 2,
-            'layout_id' => 4
+            'layout_id' => 3
         ]);
 
-        DB::table('layout_templates')->insert([
-
-            'template_id' => 1,
-            'layout_id' => 2
-        ]);
     }
 
     /**

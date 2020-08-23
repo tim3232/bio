@@ -15,14 +15,24 @@ class PopulatePagesTable extends Migration
     {
         DB::table('pages')->insert([
 
-            'image' => 'background-flowers.jpg',
-            'body_image' => '1da723dd0b5c4fb98bc1fea47a11adf5.bmp',
-            'slug' => 'test-slug',
-             'title' => 'title',
-            'description' => 'dsdsdsdsdss',
             'layout_id' => 1,
-            'text' => 'dsddfd',
             'template_id' => 1,
+            'slug' => 'test-slug',
+            'title' => '<h3><strong>Зарабатывайте, помогая планете</strong></h3>',
+            'description' => '<h4><ul><li>
+                            Технические и юридические гарантии, сроки окупаемости
+                        </li></ul><ul><li>
+                            Как получить молодое дерево 2020 года по выгодной цене?
+                        </li></ul><ul><li>
+                            Как это может быть полезно Вам и планете одновременно?
+                        </li></ul><ul><li>
+                            Как происходит формирование цены на деревья и оливковое масло?
+                        </li></ul></h4>',
+            'text' => '<h3>С проектом <b>BioDeposit</b> Вы можете стать владельцем оливковых деревьев, помогать планете и ежегодно получать прибыль с продажи урожая.</h3>',
+            'image' => 'background-flowers.jpg',
+            'body_image' => 'pre-sale-bg.png',
+            'youtube' => 'https://www.youtube.com/watch?v=T2lkwL6BoPQ',
+            'video_status' => 0
         ]);
     }
 

@@ -16,18 +16,9 @@ class PopulateLayoutsTable extends Migration
         DB::table('layouts')->insert([
 
             'type' => 'basic',
-            'description' => 'титул текст 2 карт',
-            'name' => 'basic-one',
+            'description' => 'посадочная страница',
+            'name' => 'basic',
             'image' => 'layout1.png',
-
-        ]);
-
-        DB::table('layouts')->insert([
-
-            'type' => 'basic',
-            'description' => '2 картинки текст',
-            'name' => 'basic-two',
-            'image' => 'layout2.png',
 
         ]);
 
@@ -36,7 +27,7 @@ class PopulateLayoutsTable extends Migration
             'type' => 'first',
             'description' => 'картинка слева текст справа',
             'name' => 'first-one',
-            'image' => 'layout3.png',
+            'image' => 'layout2.png',
 
         ]);
 
@@ -45,7 +36,7 @@ class PopulateLayoutsTable extends Migration
             'type' => 'first',
             'description' => 'титул центр картинка центр',
             'name' => 'first-two',
-            'image' => 'layout4.png',
+            'image' => 'layout3.png',
 
         ]);
     }

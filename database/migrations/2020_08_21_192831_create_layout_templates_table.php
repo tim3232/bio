@@ -15,9 +15,12 @@ class CreateLayoutTemplatesTable extends Migration
     {
         Schema::create('layout_templates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('layout_id');
-            $table->integer('template_id');
+            $table->unsignedBigInteger('layout_id');
+            $table->unsignedBigInteger('template_id');
             $table->timestamps();
+
+            $table->foreign('layout_id')->references('id')->on('layouts');
+            $table->foreign('template_id')->references('id')->on('templates');
         });
     }
 

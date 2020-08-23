@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Page extends Model
 {
 
-    protected $fillable = ['image','body_image','slug','title','description','route','layout_id','text','template_id'];
+    protected $fillable = ['image','body_image','slug','title','description','layout_id','youtube','text','template_id'];
 
     public static function findBySlug($slug)
     {
