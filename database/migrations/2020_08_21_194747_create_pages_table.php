@@ -21,8 +21,8 @@ class CreatePagesTable extends Migration
             $table->unsignedBigInteger('template_id');
             $table->text('description')->nullable();
             $table->text('text')->nullable();
-            $table->string('body_image');
-            $table->string('image');
+            $table->string('body_image')->nullable();
+            $table->string('image')->nullable();
             $table->string('youtube')->nullable();
             $table->integer('video_status')->nullable();
             $table->timestamps();
