@@ -129,5 +129,8 @@
             $('#'+id+'.save').prop("disabled", false);
         });
 
+        $('.container-fluid').addClass('added-class');
+        $('.wrapper').addClass('added-class');
+
     </script>
 @stop

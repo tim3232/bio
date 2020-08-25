@@ -15,24 +15,6 @@ $(".select-layout").on("change",function () {
     $('.layout_id').val(layout_id);
 });
 
-//
-//
-// var inputWhichSelectLayout = $('.input-show-select');
-//
-// inputWhichSelectLayout.on('click',function () {
-//         $('.type-layouts').show();
-// });
-//
-// $('li').on('mousedown',function () {
-//     $('.input-show-select').val($(this).attr('value'));
-//     $('.type-layouts').hide();
-//     $('.layout_id').val($(this).attr('id'));
-// });
-//
-// inputWhichSelectLayout.bind('blur', function(){
-//     $('.type-layouts').hide();
-// });
-
 var notValideImage = true;
 
 function loadImage(event) {
@@ -107,4 +89,7 @@ $(".form-submit").on("submit", function (e) {
         }
 
 });
+
+$('.container-fluid').addClass('added-class');
+$('.wrapper').addClass('added-class');
 

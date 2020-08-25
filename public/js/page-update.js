@@ -84,4 +84,5 @@ $(".form-submit").on("submit", function (e) {
 
 });
 
-
+$('.container-fluid').addClass('added-class');
+$('.wrapper').addClass('added-class');

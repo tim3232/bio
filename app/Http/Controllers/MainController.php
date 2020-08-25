@@ -14,10 +14,10 @@ class MainController extends Controller
 
     public function index(Page $page, Template $template)
     {
+
         $page = $page->all();
         $templates = $template->all();
         $layouts = Layout::all();
-
         return view('admin',['pages' => $page, 'templates' => $templates,'layouts' => $layouts]);
     }
 
@@ -140,7 +140,7 @@ class MainController extends Controller
 
 
     public function users(User $user){
-        $userId = Auth::id();
+        $userId = auth()->user()->id;
         $users = $user->where('id','!=',$userId)->get();
         return view('user',['users' => $users]);
     }

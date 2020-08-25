@@ -31,6 +31,9 @@ left: 80px;
 background: rgba(120,142,46,.56);
 }
 
+.added-class:after {
+    content:none
+}
 
 .desc ul li {
     list-style: none;
