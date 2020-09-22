@@ -18,21 +18,11 @@ class PopulatePagesTable extends Migration
             'layout_id' => 1,
             'template_id' => 1,
             'slug' => 'test-slug',
-            'title' => '<h3><strong>Зарабатывайте, помогая планете</strong></h3>',
-            'description' => '<h4><ul><li>
-                            Технические и юридические гарантии, сроки окупаемости
-                        </li></ul><ul><li>
-                            Как получить молодое дерево 2020 года по выгодной цене?
-                        </li></ul><ul><li>
-                            Как это может быть полезно Вам и планете одновременно?
-                        </li></ul><ul><li>
-                            Как происходит формирование цены на деревья и оливковое масло?
-                        </li></ul></h4>',
-            'text' => '<h3>С проектом <b>BioDeposit</b> Вы можете стать владельцем оливковых деревьев, помогать планете и ежегодно получать прибыль с продажи урожая.</h3>',
-            'image' => 'background-flowers.jpg',
+            'title' => '<p><font face="FiraSansBlack">ПРОТЕСТИРУЙТЕ НОВЫЙ СПОСОБ ЗАРАБАТЫВАТЬ</font></p>',
+            'description' => '<p><font face="FiraSansBook">Выберите удобный мессенджер и узнайте:</font></p><ul><li><font face="FiraSansBook">технические и юридические гарантии, сроки окупаемости.</font></li><li><font face="FiraSansBook">как получить молодое дерево 2020 года по выгодной цене</font></li><li><font face="FiraSansBook">как это может быть полезно Вам и планете одновременно</font></li><li><font face="FiraSansBook">как происходит формирование цены на деревья и оливковое масло</font></li></ul>',
+            'text' => '<p><font face="FiraSansBlack"><span style="font-family: FiraSansBold;">Попробуйте новый вариант пассивного дохода — оливковые деревья.</span></font></p><p><font face="FiraSansBlack"><span style="font-family: FiraSansBold;">Порог входа ниже, чем в других сферах, высокая устойчивость к кризисам, долгосрочная перспектива.</span></font></p><p><span style="font-family: FiraSansBold">Начать можно всего с одного дерева и лично убедиться, что это работает.</span></p>',
+            'image' => 'new.jpg',
             'body_image' => 'pre-sale-bg.png',
-            'youtube' => 'https://www.youtube.com/watch?v=T2lkwL6BoPQ',
-            'video_status' => 0
         ]);
     }
 

@@ -39,6 +39,15 @@ class PopulateLayoutsTable extends Migration
             'image' => 'layout3.png',
 
         ]);
+
+        DB::table('layouts')->insert([
+
+            'type' => 'basic',
+            'description' => 'слева текст справа картинка',
+            'name' => 'basic-two',
+            'image' => 'layout4.png',
+
+        ]);
     }
 
     /**
