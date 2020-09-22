@@ -24,6 +24,11 @@ Route::group(['middleware' => 'auth'], function () {
         return redirect('admin');
     });
 
+    Route::get('clear', function () {
+        Log::debug('CLEARED');
+        Artisan::call('cache:clear');
+    });
+
     Route::group(['prefix' => 'admin'], function () {
         Route::get('','MainController@index')->name('admin');
         Route::get('change-password','MainController@reset');
@@ -40,10 +45,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     /*FORM*/
     Route::get('create-page', 'MainController@form')->name('page');
-    Route::put('create-page', 'MainController@set_form')->name('create-page');
-    Route::post('create-page', 'MainController@change_form')->name('change-template-create');
+    Route::post('create-page', 'MainController@set_form')->name('create-page');
+    //Route::post('create-page', 'MainController@change_form')->name('change-template-create');
     /*SHOW PAGE*/
-    Route::get('{slug}', 'MainController@page')->name('wow-page');
+    Route::get('{slug}', 'MainController@page')->name('main-page');
     /*SHOW EDIT PAGE*/
     Route::get('edit/{slug}', 'MainController@update_page')->name('edit-page');
     /*UPDATE PAGE*/
@@ -53,6 +58,8 @@ Route::group(['middleware' => 'auth'], function () {
     /*DELETE PAGE*/
     Route::get('delete/{slug}', 'MainController@delete_page')->name('delete-page');
 
+    /*ADD VIDEO TO PAGE*/
+    Route::post('{slug}/leeloo', 'MainController@add_leeloo')->name('add-leeloo');
     /*ADD VIDEO TO PAGE*/
     Route::post('{slug}/video', 'MainController@video')->name('add-video');
     Route::get('{slug}/video', 'MainController@changeStatusVideo')->name('status-video');

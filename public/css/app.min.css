@@ -1,1 +1,180 @@
-@font-face{font-family:Fira Sans Heavy;src:local("Fira Sans Ultra Italic"),local("FiraSans-UltraItalic"),url(../fonts/Firasansultraitalic.woff2) format("woff2"),url(../fonts/Firasansultraitalic.woff) format("woff"),url(../fonts/Firasansultraitalic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:Fira Sans Heavy;src:local("Fira Sans Ultra"),local("FiraSans-Ultra"),url(../fonts/Firasansultra.woff2) format("woff2"),url(../fonts/Firasansultra.woff) format("woff"),url(../fonts/Firasansultra.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:Fira Sans Book;src:url(../fonts/FiraSans-Book.woff2) format("woff2"),url(../fonts/FiraSans-Book.woff) format("woff"),url(../fonts/FiraSans-Book.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:FiraSans-Medium;src:url(../fonts/FiraSans-Medium.woff2) format("woff2"),url(../fonts/FiraSans-Medium.woff) format("woff"),url(../fonts/FiraSans-Medium.ttf) format("truetype");font-weight:400;font-style:normal}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}*{-webkit-box-sizing:border-box;box-sizing:border-box;outline:none!important}.clearfix:after{content:" ";clear:both;display:block;height:0;overflow:hidden;visibility:hidden}::-webkit-input-placeholder{color:#666;opacity:1}:-moz-placeholder,::-moz-placeholder{color:#666;opacity:1}:-ms-input-placeholder{color:#666;opacity:1}@-webkit-keyframes a{0%{-webkit-transform:translateY(200px);transform:translateY(200px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@-o-keyframes a{0%{-o-transform:translateY(200px);transform:translateY(200px);opacity:0}to{-o-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes a{0%{-webkit-transform:translateY(200px);-o-transform:translateY(200px);transform:translateY(200px);opacity:0}to{-webkit-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0);opacity:1}}.slide_top{-webkit-animation:a 1s 1 ease-in-out;-o-animation:a 1s 1 ease-in-out;animation:a 1s 1 ease-in-out;-webkit-transition:opacity 1s linear .3s;-o-transition:opacity 1s linear .3s;transition:opacity 1s linear .3s}@-webkit-keyframes b{0%{-webkit-transform:translateY(-200px);transform:translateY(-200px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@-o-keyframes b{0%{-o-transform:translateY(-200px);transform:translateY(-200px);opacity:0}to{-o-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes b{0%{-webkit-transform:translateY(-200px);-o-transform:translateY(-200px);transform:translateY(-200px);opacity:0}to{-webkit-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0);opacity:1}}.slide_down{-webkit-animation:b 1s 1 ease-in-out;-o-animation:b 1s 1 ease-in-out;animation:b 1s 1 ease-in-out;-webkit-transition:opacity 1s linear .3s;-o-transition:opacity 1s linear .3s;transition:opacity 1s linear .3s}.animated{-webkit-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both}.wrapper{min-width:320px;width:100%;font-size:16px;min-height:100vh;background:url(../img/main-back.jpg) 50% no-repeat;-webkit-background-size:cover;background-size:cover;position:relative}.wrapper.pre-sale{background:url(../img/pre-sale-bg.png) 50% no-repeat;-webkit-background-size:cover;background-size:cover;padding-top: 60px}.wrapper.pre-sale:after{display:none}.wrapper.pre-sale .main-image{max-width:890px;padding:0 15px}.wrapper:after{content:"";background:url(../imag/top-arrow.png) bottom no-repeat;position:absolute;bottom:0;left:0;width:620px;height:315px;max-width:100%}.container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;max-width:1920px;padding-left:50px;margin:0 auto}.main-content__desc{font-family:Fira Sans Book;font-size:22px;margin-top:40px;line-height:30px}.main-content__desc span{display:block;margin-top:50px}.main-content__desc strong{font-weight:600}.main-content__desc b{font-weight:600;color:#698c1b}.main-info{padding-top:110px;padding-bottom:150px;width:50%;position:relative;z-index:3}.main-info .desc{padding-right:15px}.main-info.main-content{padding-bottom:20px;padding-top:30px}.main-info.main-content .social .social-link{margin-bottom:20px}.main-info.main-content .social{padding-top:30px}.main-info.main-content .desc ul{margin-top:20px}.main-info.main-content .desc ul li{font-size:20px}.main-info.main-content .desc ul li:after{top:4px}.main-info .desc p{color:#000;font-family:Fira Sans Book;font-size:36px}.main-info .desc p,.main-info .desc p span{font-weight:400;text-transform:uppercase;line-height:1.2}.main-info .desc p span{color:#415020;font-family:Fira Sans Heavy;font-size:45px}.main-info .desc ul{margin-top:35px;list-style:none;padding-left:30px}.main-info .desc ul li{padding-left:30px;font-family:Fira Sans Book;font-weight:400;font-size:28px;color:#000;position:relative}.main-info .desc ul li:after{content:"";position:absolute;top:8px;left:0;width:12px;height:12px;-webkit-border-radius:50%;border-radius:50%;background:#acca34}.main-info .desc ul li+li{margin-top:10px}.main-info .social{padding-top:100px}.main-info .social .social-link{margin-bottom:125px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.main-info .social .social-link a{display:block}.main-info .social .social-link a+a{margin-left:40px}.main-info .social .social-desc p{font-family:Fira Sans Book;font-weight:400;font-size:28px;line-height:1.2;color:#000;text-align:center}.main-image{width:50%;position:relative;left:0}.main-image img{width:100%;height:auto;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.social-image{display:none}.privacy-policy{font:100% Fira Sans Book,sans-serif;padding-bottom:10px}.privacy-policy__link{font:100% Fira Sans Book,sans-serif;position:absolute;bottom:10px;left:30px;font-size:12px;z-index:4}.privacy-policy__link a{color:#000;text-decoration:none}.privacy-policy__link a:hover{text-decoration:underline}.privacy-policy__wrap{width:100%;padding-top:30px}.privacy-policy__container{padding:0 30px}.privacy-policy__container h2{font-size:30px;font-weight:500}.privacy-policy__container h3{font-size:22px;margin:25px 0 10px;font-weight:500}.privacy-policy__container p{font-size:16px;margin:10px 0;text-align:justify}.valentine{font-family:Fira Sans Book}.valentine-image{position:absolute;bottom:0;right:0;font-size:0;width:100%;max-width:52%;z-index:1}.valentine-image img,.valentine-image picture,.valentine-image source{max-width:100%}.valentine-block{max-width:650px}.valentine-container{width:100%;max-width:1550px;margin:0 auto;padding:40px 30px;color:#343434;position:relative;z-index:2}.valentine-container a{display:inline-block;color:#91bc1c;text-decoration:none}.valentine-container a:hover{text-decoration:underline}.valentine-container p{margin-top:10px;margin-bottom:10px;font-size:24px;line-height:30px}.valentine-container p span{font-family:Fira Sans Heavy;color:#91bc1c;font-size:32px}.valentine-container p strong{font-family:Fira Sans Heavy;color:#232323;font-size:24px}.valentine-container ul li{font-size:20px;line-height:24px}.valentine-logo{width:100%;max-width:400px;margin-bottom:20px}.valentine-logo img{max-width:100%}.leeloo-lgt-form-wrapper{width:100%!important;max-width:420px;margin:0 auto}.social-link>div{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.wepster-hash-nov97l{margin-top:50px;margin-bottom:50px}.pre-sale{font-family:FiraSans-Medium}.pre-sale .container{padding-left:156px;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.pre-sale .container:after{left:50px;background:rgba(120,142,46,.89)}.pre-sale .container:after,.pre-sale:before{content:"";position:absolute;top:0;bottom:0;width:29px;display:block;z-index:2}.pre-sale:before{left:79px;background:rgba(120,142,46,.56)}.pre-sale .main-info .social{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.pre-sale .main-info .desc ul{padding-left:14px}.pre-sale .main-info .desc ul li{font-family:FiraSans-Medium}.pre-sale .main-info{width:50%}.pre-sale .main-image{margin-top:50px}.pre-sale .main-content__desc{font-family:FiraSans-Medium;font-size:25px}.pre-sale .main-content__desc span{margin-top:20px}.pre-sale .main-content__desc b{font-family:Fira Sans Heavy}.pre-sale .privacy-policy__link a{color:#fff}b.red{color:#b22808}.media .main-info .desc p{margin-bottom:30px}.media .main-info .desc ul{margin-top:10px}.media .social-desc{font-family:Fira Sans Book;font-size:24px;line-height:30px;text-align:center;max-width:600px;margin:50px auto 0}.media .social-desc svg{margin-top:20px;width:70px;color:#acca34}.media .social{padding-top:30px}@media only screen and (max-height:768px){.valentine-container p{font-size:18px}.valentine-logo img{max-width:70%}.valentine-container p span{font-size:24px}.valentine-container ul li{font-size:16px}.valentine-block br{display:none}}@media only screen and (max-width:1300px){.main-info{padding-top:85px;padding-bottom:120px}.main-info .desc p{font-size:29px;line-height:1.3}.main-info .desc p span{font-size:36px}.main-info .desc ul{margin-top:70px;padding-left:20px}.main-info .desc ul li{font-size:24px}.main-info .social .social-link a img{width:63px;height:62px}.main-info .social .social-link a+a{margin-left:30px}.main-info .social .social-desc p{font-size:23px;line-height:1.3}.valentine-container p,.valentine-container p span,.valentine-container p strong{font-size:22px}.valentine-block{max-width:550px}}@media only screen and (max-width:1100px){.pre-sale .container:after{left:20px}.pre-sale:before{left:49px}.pre-sale .main-info{width:80%}.pre-sale .container{padding-left:50px}.pre-sale .main-info .desc p{text-align:left}.main-image{display:none}.container{padding:0 30px}.main-info{width:100%;padding-top:70px;padding-bottom:70px}.main-info .desc p{text-align:center}.social-image{margin:20px 0;display:block}.social-image img{width:100%;height:auto}.main-info .social{padding-top:80px}}@media only screen and (max-width:980px){.valentine-image{position:relative;max-width:80%}.pre-sale .main-info{width:85%}}@media only screen and (max-width:700px){.pre-sale .main-info{width:90%}.pre-sale .container:after,.pre-sale:before{width:15px}.pre-sale .container:after{left:15px}.pre-sale:before{left:30px}.privacy-policy__container{padding:0 15px}.privacy-policy__container h2{font-size:26px}.pre-sale .main-content__desc{font-size:18px;line-height:24px}.privacy-policy__container h3{font-size:18px;margin-top:20px}.valentine-logo{max-width:250px}.privacy-policy__wrap{padding-top:20px}.privacy-policy__container p{font-size:14px}.main-info .desc p{font-size:22px}.main-info .desc p span{font-size:25px}.main-info .desc ul li{font-size:20px}.social-image{margin:35px 0}.main-info .social{padding-top:50px}.main-info .social .social-link{margin-bottom:60px}.main-info .social .social-desc p{font-size:20px}.pre-sale .container{padding-right:0}}@media only screen and (max-width:550px){.media .main-info .desc p{margin-bottom:20px}.media .social-desc{font-size:14px;line-height:22px;margin-top:30px}.media .social-desc svg{width:50px}.valentine-image{max-width:100%}.valentine-container p,.valentine-container p span,.valentine-container p strong{font-size:20px}.valentine-container{padding-left:15px;padding-right:15px}.valentine-container ul li{font-size:16px;line-height:20px}.main-info{padding-top:40px}.main-info .desc p{font-size:19px;line-height:1.4}.main-info .desc p span{font-size:19px}.main-info .desc ul{padding-left:0}.main-info .desc ul li{font-size:18px;line-height:1.3}.main-info .social .social-desc p{font-size:18px}.container{padding:0 20px}.privacy-policy__link{left:20px}.main-content__desc,.valentine-container p,.valentine-container p strong{font-size:16px;line-height:22px}.main-info.main-content .desc ul li{font-size:14px}.main-content__desc span{margin-top:30px}.wrapper:after{width:100%;height:200px;-webkit-background-size:cover;background-size:cover}.leeloo-lgt-form{width:100%!important}.wepster-hash-nov97l{margin-top:10px;margin-bottom:10px}.social-desc{margin-bottom:20px}.pre-sale .main-content__desc{margin-top:15px}.pre-sale .main-info .desc ul{padding-left:0}}@media only screen and (max-width:400px){.pre-sale .main-info .desc p{font-size:20px}.main-info{padding-top:40px}.main-info .desc p{font-size:16px;line-height:1.4}.main-info .desc p span{font-size:17px}.main-info .desc ul{margin-top:45px}.main-info .desc ul li{font-size:15px;line-height:1.3}.main-info .social .social-desc p{font-size:15px}.main-info .social .social-link a img{width:53px;height:53px}}
+@font-face{font-family:Fira Sans Heavy;src:local("Fira Sans Ultra Italic"),local("FiraSans-UltraItalic"),url(../fonts/Firasansultraitalic.woff2) format("woff2"),url(../fonts/Firasansultraitalic.woff) format("woff"),url(../fonts/Firasansultraitalic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:Fira Sans Heavy;src:local("Fira Sans Ultra"),local("FiraSans-Ultra"),url(../fonts/Firasansultra.woff2) format("woff2"),url(../fonts/Firasansultra.woff) format("woff"),url(../fonts/Firasansultra.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:Fira Sans Book;src:url(../fonts/FiraSans-Book.woff2) format("woff2"),url(../fonts/FiraSans-Book.woff) format("woff"),url(../fonts/FiraSans-Book.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:FiraSans-Medium;src:url(../fonts/FiraSans-Medium.woff2) format("woff2"),url(../fonts/FiraSans-Medium.woff) format("woff"),url(../fonts/FiraSans-Medium.ttf) format("truetype");font-weight:400;font-style:normal} ,a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}*{-webkit-box-sizing:border-box;box-sizing:border-box;outline:none!important}.clearfix:after{content:" ";clear:both;display:block;height:0;overflow:hidden;visibility:hidden}::-webkit-input-placeholder{color:#666;opacity:1}:-moz-placeholder,::-moz-placeholder{color:#666;opacity:1}:-ms-input-placeholder{color:#666;opacity:1}@-webkit-keyframes a{0%{-webkit-transform:translateY(200px);transform:translateY(200px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@-o-keyframes a{0%{-o-transform:translateY(200px);transform:translateY(200px);opacity:0}to{-o-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes a{0%{-webkit-transform:translateY(200px);-o-transform:translateY(200px);transform:translateY(200px);opacity:0}to{-webkit-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0);opacity:1}}.slide_top{-webkit-animation:a 1s 1 ease-in-out;-o-animation:a 1s 1 ease-in-out;animation:a 1s 1 ease-in-out;-webkit-transition:opacity 1s linear .3s;-o-transition:opacity 1s linear .3s;transition:opacity 1s linear .3s}@-webkit-keyframes b{0%{-webkit-transform:translateY(-200px);transform:translateY(-200px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@-o-keyframes b{0%{-o-transform:translateY(-200px);transform:translateY(-200px);opacity:0}to{-o-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes b{0%{-webkit-transform:translateY(-200px);-o-transform:translateY(-200px);transform:translateY(-200px);opacity:0}to{-webkit-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0);opacity:1}}.slide_down{-webkit-animation:b 1s 1 ease-in-out;-o-animation:b 1s 1 ease-in-out;animation:b 1s 1 ease-in-out;-webkit-transition:opacity 1s linear .3s;-o-transition:opacity 1s linear .3s;transition:opacity 1s linear .3s}.animated{-webkit-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both}.wrapper{min-width:320px;width:100%;font-size:16px;min-height:100vh;background:url(../img/main-back.jpg) 50% no-repeat;-webkit-background-size:cover;background-size:cover;position:relative}.wrapper.pre-sale{background:url(../img/pre-sale-bg.png) 50% no-repeat;-webkit-background-size:cover;background-size:cover;padding-top: 30px}.wrapper.pre-sale:after{display:none}.wrapper.pre-sale .main-image{max-width:890px;padding:0 15px}.wrapper:after{content:"";background:url(../imag/top-arrow.png) bottom no-repeat;position:absolute;bottom:0;left:0;width:620px;height:315px;max-width:100%}.container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;max-width:1920px;padding-left:50px;margin:0 auto}.main-content__desc{font-family:Fira Sans Book;font-size:22px;margin-top:40px;line-height:30px}.main-content__desc span{display:block;margin-top:50px}.main-content__desc strong{font-weight:600}.main-content__desc b{font-weight:600;color:#698c1b}.main-info{padding-top:110px;padding-bottom:150px;width:50%;position:relative;z-index:3}.main-info .desc{padding-right:15px}.main-info.main-content{padding-bottom:20px;padding-top:30px}.main-info.main-content .social .social-link{margin-bottom:20px}.main-info.main-content .social{padding-top:30px}.main-info.main-content .desc ul{margin-top:20px}.main-info.main-content .desc ul li{    }.main-info.main-content .desc ul li:after{top:4px}.main-info .desc ul{margin-top:35px;list-style:none;padding-left:30px}.main-info .desc ul li{padding-left:30px;font-family:Fira Sans Book;font-weight:400;color:#000;position:relative}.main-info .desc ul li:after{content:"";position:absolute;top:8px;left:0;width:12px;height:12px;-webkit-border-radius:50%;border-radius:50%;background:#acca34}.main-info .desc ul li+li{margin-top:10px}.main-info .social{padding-top:100px}.main-info .social .social-link{margin-bottom:125px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.main-info .social .social-link a{display:block}.main-info .social .social-link a+a{margin-left:40px}.main-info .social .social-desc p{font-family:Fira Sans Book;font-weight:400;font-size:28px;line-height:1.2;color:#000;text-align:center}.main-image{width:50%;position:relative;left:0}.main-image img{width:100%;height:auto;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.social-image{display:none}.privacy-policy{font:100% Fira Sans Book,sans-serif;padding-bottom:10px}.privacy-policy__link{font:100% Fira Sans Book,sans-serif;position:absolute;bottom:10px;left:30px;font-size:12px;z-index:4}.privacy-policy__link a{color:#000;text-decoration:none}.privacy-policy__link a:hover{text-decoration:underline}.privacy-policy__wrap{width:100%;padding-top:30px}.privacy-policy__container{padding:0 30px}.privacy-policy__container h2{font-size:30px;font-weight:500}.privacy-policy__container h3{font-size:22px;margin:25px 0 10px;font-weight:500}.privacy-policy__container p{font-size:16px;margin:10px 0;text-align:justify}.valentine{font-family:Fira Sans Book}.valentine-image{position:absolute;bottom:0;right:0;font-size:0;width:100%;max-width:52%;z-index:1}.valentine-image img,.valentine-image picture,.valentine-image source{max-width:100%}.valentine-block{max-width:650px}.valentine-container{width:100%;max-width:1550px;margin:0 auto;padding:40px 30px;color:#343434;position:relative;z-index:2}.valentine-container a{display:inline-block;color:#91bc1c;text-decoration:none}.valentine-container a:hover{text-decoration:underline}.valentine-container p{margin-top:10px;margin-bottom:10px;font-size:24px;line-height:30px}.valentine-container p span{font-family:Fira Sans Heavy;color:#91bc1c;font-size:32px}.valentine-container p strong{font-family:Fira Sans Heavy;color:#232323;font-size:24px}.valentine-container ul li{font-size:20px;line-height:24px}.valentine-logo{width:100%;max-width:400px;margin-bottom:20px}.valentine-logo img{max-width:100%}.leeloo-lgt-form-wrapper{width:100%!important;max-width:420px;margin:0 auto}.social-link>div{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.wepster-hash-nov97l{margin-top:50px;margin-bottom:50px}.pre-sale{font-family:FiraSans-Medium}.pre-sale .container{padding-left:156px;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.pre-sale .container:after{left:50px;background:rgba(120,142,46,.89)}.pre-sale .container:after,.pre-sale:before{content:"";position:absolute;top:0;bottom:0;width:29px;display:block;z-index:2}.pre-sale:before{left:79px;background:rgba(120,142,46,.56)}.pre-sale .main-info .social{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.pre-sale .main-info .desc ul{padding-left:14px}.pre-sale .main-info .desc ul li{font-family:FiraSans-Medium}.pre-sale .main-info{width:50%}.pre-sale .main-image{margin-top:50px}.pre-sale .main-content__desc{font-family:FiraSans-Medium;font-size:25px}.pre-sale .main-content__desc span{margin-top:20px}.pre-sale .main-content__desc b{font-family:Fira Sans Heavy}.pre-sale .privacy-policy__link a{color:#fff}b.red{color:#b22808}.media .main-info .desc p{margin-bottom:30px}.media .main-info .desc ul{margin-top:10px}.media .social-desc{font-family:Fira Sans Book;font-size:24px;line-height:30px;text-align:center;max-width:600px;margin:50px auto 0}.media .social-desc svg{margin-top:20px;width:70px;color:#acca34}.media .social{padding-top:30px}@media only screen and (max-width:768px){.valentine-container p{font-size:18px}.valentine-logo img{max-width:70%}.valentine-container p span{font-size:24px}.valentine-container ul li{font-size:16px}.valentine-block br{display:none}}@media only screen and (max-width:1300px){.main-info{padding-top:85px;padding-bottom:120px}.main-info .desc p{font-size:29px;line-height:1.3}.main-info .desc p span{font-size:36px}.main-info .desc ul{margin-top:70px;padding-left:20px}.main-info .desc ul li{font-size:24px}.main-info .social .social-link a img{width:63px;height:62px}.main-info .social .social-link a+a{margin-left:30px}.main-info .social .social-desc p{font-size:23px;line-height:1.3}.valentine-container p,.valentine-container p span,.valentine-container p strong{font-size:22px}.valentine-block{max-width:550px}}@media only screen and (max-width:1100px){.pre-sale .container:after{left:20px}.pre-sale:before{left:49px}.pre-sale .main-info{width:80%}.pre-sale .container{padding-left:50px}.pre-sale .main-info .desc p{text-align:left}.main-image{display:none}.container{padding:0 30px}.main-info{width:100%;padding-top:70px;padding-bottom:70px}.main-info .desc p{text-align:center}.social-image{margin:20px 0;display:block}.social-image img{width:100%;height:auto}.main-info .social{padding-top:80px}}@media only screen and (max-width:980px){.valentine-image{position:relative;max-width:80%}.pre-sale .main-info{width:85%}}@media only screen and (max-width:700px){ .video-mobile{ display: block !important;}  iframe{ max-width: 100% }  .pre-sale .main-info{width:90%}.pre-sale .container:after,.pre-sale:before{width:15px}.pre-sale .container:after{left:15px}.pre-sale:before{left:30px}.privacy-policy__container{padding:0 15px}.privacy-policy__container h2{font-size:26px}.pre-sale .main-content__desc{font-size:18px;line-height:24px}.privacy-policy__container h3{font-size:18px;margin-top:20px}.valentine-logo{max-width:250px}.privacy-policy__wrap{padding-top:20px}.privacy-policy__container p{font-size:14px}.main-info .desc p{font-size:22px}.main-info .desc p span{font-size:25px}.main-info .desc ul li{font-size:20px}.social-image{margin:35px 0}.main-info .social{padding-top:50px}.main-info .social .social-link{margin-bottom:60px}.main-info .social .social-desc p{font-size:20px}.pre-sale .container{padding-right:0}}@media only screen and (max-width:550px){.media .main-info .desc p{margin-bottom:20px}.media .social-desc{font-size:14px;line-height:22px;margin-top:30px}.media .social-desc svg{width:50px}.valentine-image{max-width:100%}.valentine-container p,.valentine-container p span,.valentine-container p strong{font-size:20px}.valentine-container{padding-left:15px;padding-right:15px}.valentine-container ul li{font-size:16px;line-height:20px}.main-info{padding-top:40px}.main-info .desc p{font-size:19px;line-height:1.4}.main-info .desc p span{font-size:19px}.main-info .desc ul{padding-left:0}.main-info .desc ul li{font-size:18px;line-height:1.3}.main-info .social .social-desc p{font-size:18px}.container{padding:0 20px}.privacy-policy__link{left:20px}.main-content__desc,.valentine-container p,.valentine-container p strong{font-size:16px;line-height:22px}.main-info.main-content .desc ul li{font-size:14px}.main-content__desc span{margin-top:30px}.wrapper:after{width:100%;height:200px;-webkit-background-size:cover;background-size:cover}.leeloo-lgt-form{width:100%!important}.wepster-hash-nov97l{margin-top:10px;margin-bottom:10px}.social-desc{margin-bottom:20px}.pre-sale .main-content__desc{margin-top:15px}.pre-sale .main-info .desc ul{padding-left:0}}@media only screen and (max-width:400px){.pre-sale .main-info .desc p{font-size:20px}.main-info{padding-top:40px}.main-info .desc p{font-size:16px;line-height:1.4}.main-info .desc p span{font-size:17px}.main-info .desc ul{margin-top:45px}.main-info .desc ul li{font-size:15px;line-height:1.3}.main-info .social .social-desc p{font-size:15px}.main-info .social .social-link a img{width:53px;height:53px}}
+
+
+@font-face {
+    font-family: FiraSansBlack; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Black.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBoldItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-BoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBook; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Book.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBookItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-BookItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansEight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Eight.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansEightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-EightItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraBold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraBoldItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraBoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraLight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLight.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraLightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLightItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+/*new*/
+@font-face {
+    font-family: FiraSans-BoldItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-BoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Book; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Book.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-BookItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-BookItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Eight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Eight.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraLightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLightItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-EightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-EightItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraBold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraBoldItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraBoldItalic.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-ExtraLight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLight.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraLightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLightItalic.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-Four; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Four.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-FourItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-FourItalic.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: FiraSans-Hair; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Hair.otf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-HairItalic;/* Имя шрифта */
+    src: url(../fonts/FiraSans-HairItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Heavy; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Heavy.otf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-HeavyItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-HeavyItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Italic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Italic.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: FiraSans-Light; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Light.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-LightItalic;/* Имя шрифта */
+    src: url(../fonts/FiraSans-LightItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Medium; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Medium.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-MediumItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-MediumItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Regular; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+@font-face {
+    font-family: FiraSans-SemiBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-SemiBold.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-SemiBoldItalic;/* Имя шрифта */
+    src: url(../fonts/FiraSans-SemiBoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Thin; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Thin.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-ThinItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ThinItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Two; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Two.otf); /* Путь к файлу со шрифтом */
+}
+
+
+@font-face {
+    font-family: FiraSans-TwoItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-TwoItalic.otf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-Ultra;/* Имя шрифта */
+    src: url(../fonts/FiraSans-Ultra.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-UltraItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-UltraItalic.otf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-UltraLight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-UltraLight.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-UltraLightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-UltraLightItalic.otf); /* Путь к файлу со шрифтом */
+}

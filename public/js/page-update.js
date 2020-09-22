@@ -1,6 +1,27 @@
 $(document).ready(function() {
-    $(".title").summernote();
-    $(".description").summernote();
+    $(".title").summernote({
+
+        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana', 'FiraSans-ExtraLight','FiraSansBlack',
+        'FiraSansBold','FiraSansBoldItalic','FiraSansBook','FiraSansBookItalic','FiraSansEight','FiraSansEightItalic','FiraSans-ExtraBold',
+        'FiraSansBold','FiraSans-ExtraBoldItalic','FiraSans-ExtraLight','FiraSans-ExtraLightItalic','FiraSansBold','FiraSans-BoldItalic', 'FiraSans-Book','FiraSans-BookItalic','FiraSans-Eight','FiraSans-ExtraLightItalic','FiraSans-EightItalic','FiraSans-ExtraBold','FiraSans-ExtraBoldItalic','FiraSans-ExtraLight','FiraSans-ExtraLightItalic','FiraSans-Four','FiraSans-FourItalic','FiraSans-Hair','FiraSans-HairItalic','FiraSans-Heavy','FiraSans-HeavyItalic','FiraSans-Italic','FiraSans-Light','FiraSans-LightItalic','FiraSans-Medium','FiraSans-MediumItalic','FiraSans-Regular'
+            ,'FiraSans-SemiBold','FiraSans-SemiBoldItalic','FiraSans-Thin','FiraSans-ThinItalic','FiraSans-Two','FiraSans-TwoItalic','FiraSans-Ultra','FiraSans-UltraItalic','FiraSans-UltraLight','FiraSans-UltraLightItalic'
+        ],
+        fontNamesIgnoreCheck: ['FiraSans-ExtraLight','FiraSansBlack','FiraSansBold','FiraSansBoldItalic','FiraSansBook','FiraSansBookItalic','FiraSansEight','FiraSansEightItalic','FiraSans-ExtraBold',
+            'FiraSansBold','FiraSans-ExtraBoldItalic','FiraSans-ExtraLight','FiraSans-ExtraLightItalic','FiraSansBold','FiraSans-BoldItalic', 'FiraSans-Book','FiraSans-BookItalic','FiraSans-Eight','FiraSans-ExtraLightItalic','FiraSans-EightItalic','FiraSans-ExtraBold','FiraSans-ExtraBoldItalic','FiraSans-ExtraLight','FiraSans-ExtraLightItalic','FiraSans-Four','FiraSans-FourItalic','FiraSans-Hair','FiraSans-HairItalic','FiraSans-Heavy','FiraSans-HeavyItalic','FiraSans-Italic','FiraSans-Light', ,'FiraSans-LightItalic','FiraSans-Medium','FiraSans-MediumItalic','FiraSans-Regular','FiraSans-SemiBold','FiraSans-SemiBoldItalic','FiraSans-Thin','FiraSans-ThinItalic','FiraSans-Two','FiraSans-TwoItalic','FiraSans-Ultra','FiraSans-UltraItalic','FiraSans-UltraLight','FiraSans-UltraLightItalic'
+        ]
+
+    });
+    $(".description").summernote({
+
+        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana', 'FiraSans-ExtraLight','FiraSansBlack',
+            'FiraSansBold','FiraSansBoldItalic','FiraSansBook','FiraSansBookItalic','FiraSansEight','FiraSansEightItalic','FiraSans-ExtraBold',
+            'FiraSansBold','FiraSans-ExtraBoldItalic','FiraSans-ExtraLight','FiraSans-ExtraLightItalic','FiraSansBold','FiraSans-BoldItalic', 'FiraSans-Book','FiraSans-BookItalic','FiraSans-Eight','FiraSans-ExtraLightItalic','FiraSans-EightItalic','FiraSans-ExtraBold','FiraSans-ExtraBoldItalic','FiraSans-ExtraLight','FiraSans-ExtraLightItalic','FiraSans-Four','FiraSans-FourItalic','FiraSans-Hair','FiraSans-HairItalic','FiraSans-Heavy','FiraSans-HeavyItalic','FiraSans-Italic','FiraSans-Light','FiraSans-LightItalic','FiraSans-Medium','FiraSans-MediumItalic','FiraSans-Regular'
+            ,'FiraSans-SemiBold','FiraSans-SemiBoldItalic','FiraSans-Thin','FiraSans-ThinItalic','FiraSans-Two','FiraSans-TwoItalic','FiraSans-Ultra','FiraSans-UltraItalic','FiraSans-UltraLight','FiraSans-UltraLightItalic'
+        ],
+        fontNamesIgnoreCheck: ['FiraSans-ExtraLight','FiraSansBlack','FiraSansBold','FiraSansBoldItalic','FiraSansBook','FiraSansBookItalic','FiraSansEight','FiraSansEightItalic','FiraSans-ExtraBold',
+            'FiraSansBold','FiraSans-ExtraBoldItalic','FiraSans-ExtraLight','FiraSans-ExtraLightItalic','FiraSansBold','FiraSans-BoldItalic', 'FiraSans-Book','FiraSans-BookItalic','FiraSans-Eight','FiraSans-ExtraLightItalic','FiraSans-EightItalic','FiraSans-ExtraBold','FiraSans-ExtraBoldItalic','FiraSans-ExtraLight','FiraSans-ExtraLightItalic','FiraSans-Four','FiraSans-FourItalic','FiraSans-Hair','FiraSans-HairItalic','FiraSans-Heavy','FiraSans-HeavyItalic','FiraSans-Italic','FiraSans-Light', ,'FiraSans-LightItalic','FiraSans-Medium','FiraSans-MediumItalic','FiraSans-Regular','FiraSans-SemiBold','FiraSans-SemiBoldItalic','FiraSans-Thin','FiraSans-ThinItalic','FiraSans-Two','FiraSans-TwoItalic','FiraSans-Ultra','FiraSans-UltraItalic','FiraSans-UltraLight','FiraSans-UltraLightItalic'
+        ]
+    });
 });
 
 function loadImage(event) {
@@ -11,7 +32,7 @@ function loadImage(event) {
     $('#upload-error').hide();
 
 
-    if (!valInputImage.match(/(?:gif|jpg|png|bmp)$/)) {
+    if (!valInputImage.match(/(?:gif|jpg|png|bmp|jpeg)$/)) {
         $('p#'+nameInputImage+'.error').show();
         $('.manipulate-'+nameInputImage+'').hide();
         $('input#'+nameInputImage+'').val('');
@@ -66,9 +87,10 @@ $(".form-submit").on("submit", function (e) {
     var formFields = $(this).serializeArray();
     var countErrors = 0;
     $.each(formFields,function(){
-        if(!this.value){
+        if(!this.value && this.name!='youtube'){
             $('#'+this.name+'.error').show();
             countErrors++;
+
         }
         else {
             $('#'+this.name+'.error').hide();
@@ -78,7 +100,6 @@ $(".form-submit").on("submit", function (e) {
     });
 
     if(!countErrors && !notValideImage){
-        console.log('good');
         $(this).unbind("submit").submit();
     }
 

@@ -188,7 +188,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
 
     'logout_url' => 'logout',
 
@@ -243,22 +243,18 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'Home',
+            'text' => 'Главная',
             'url'  => 'admin',
             'icon' => 'fas fa-fw fa-cog',
         ],
         [
-            'text' => 'Appoint Admin',
+            'text' => 'Добавить админа',
             'url'  => '/users',
             'icon' => 'fas fa-fw fa-plus',
         ],
-//        [
-//            'text' => 'profile',
-//            'url'  => 'admin/settings',
-//            'icon' => 'fas fa-fw fa-user',
-//        ],
+
         [
-            'text' => 'change_password',
+            'text' => 'Изменить пароль',
             'url'  => 'admin/change-password',
             'icon' => 'fas fa-fw fa-lock',
         ],

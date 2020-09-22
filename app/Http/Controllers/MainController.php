@@ -7,7 +7,7 @@ use App\Page;
 use App\Template;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class MainController extends Controller
 {
@@ -17,7 +17,7 @@ class MainController extends Controller
 
         $page = $page->all();
         $templates = $template->all();
-        $layouts = Layout::all();
+        $layouts = Layout::whereIn('id',[1,4])->get();
         return view('admin',['pages' => $page, 'templates' => $templates,'layouts' => $layouts]);
     }
 
@@ -25,20 +25,21 @@ class MainController extends Controller
         $templates = $template->all();
         $basicTemplate = $templates->where('name','basic')->first();
         $layouts = $basicTemplate->layoutsByThisTemplate;
+
         return view('form',['templates' => $templates, 'layouts' => $layouts,'basicTemplate' => $basicTemplate]);
     }
 
 
     public function page($slug, Page $page){
 
-            $info = $page->findBySlug($slug);
-            $layout = $info->pageHasLayout->name;
+        $info = $page->findBySlug($slug);
+        $layout = $info->pageHasLayout->name;
 
-            if($info){
-                return view('templates.'.$layout,['info' => $info]);
-            }
+        if($info){
+            return view('templates.'.$layout,['info' => $info]);
+        }
 
-            abort('404');
+        abort('404');
 
     }
 
@@ -47,6 +48,7 @@ class MainController extends Controller
         $info = $page->findBySlug($slug);
         $layouts = $info->templates->layoutsByThisTemplate;
         $templates = $template->all();
+
 
         if($info){
             return view('edit',['info' => $info, 'layouts' => $layouts, 'templates' => $templates]);
@@ -62,7 +64,7 @@ class MainController extends Controller
         $changedTemplate = $templates->where('id',$request->template_id)->first();
 
         $layouts = $changedTemplate->layoutsByThisTemplate;
-            return view('form-template',['layouts' => $layouts, 'templates' => $templates, 'changedTemplate' => $changedTemplate]);
+        return view('form-template',['layouts' => $layouts, 'templates' => $templates, 'changedTemplate' => $changedTemplate]);
     }
 
     public function change_template($slug, Page $page,Request $request, Template $template){
@@ -91,50 +93,77 @@ class MainController extends Controller
         $page = $page->findBySlug($slug);
 
         if($page){
-           $slug = 'error';
+            return view('error.error-slug');
         }
         else{
             $createdPage = Page::create($requestData);
-
-            if ($request->hasFile('image')) {
-                $createdPage->image = $request->file('image')->getClientOriginalName();
-                $createdPage->save();
-                $request->file('image')->move('images',$request->file('image')->getClientOriginalName());
-
-            }
-            if ($request->hasFile('body_image')) {
-
-                $createdPage->body_image = $request->file('body_image')->getClientOriginalName();
-                $createdPage->save();
-                $request->file('body_image')->move('images', $request->file('body_image')->getClientOriginalName());
+//
+            if ($request->get('youtube')) {
+                $createdPage->update(['video_status' => 1]);
             }
 
+            $imageExtension = $request->file('image')->getClientOriginalExtension();
+            $imageBodyExtension = $request->file('body_image')->getClientOriginalExtension();
+
+            $imageFilename = uniqid().'.'.$imageExtension;
+            $imageBodyfilename = uniqid().'.'.$imageBodyExtension;
+            $createdPage->image = $imageFilename;
+            $createdPage->body_image = $imageBodyfilename;
+            $request->file('image')->move('images', $imageFilename);
+            $request->file('body_image')->move('images', $imageBodyfilename);
+            $createdPage->save();
+//            if ($request->hasFile('image')) {
+//                $imageExtension = $request->file('image')->getClientOriginalExtension();
+//                $imageFilename = uniqid().'.'.$imageExtension;
+//                $createdPage->image = $imageFilename;
+//                $createdPage->save();
+//                $request->file('image')->move('images', $imageFilename);
+//
+//            }
+//
+//            if ($request->hasFile('body_image')) {
+//                $imageBodyExtension = $request->file('body_image')->getClientOriginalExtension();
+//                $imageBodyfilename = uniqid().'.'.$imageBodyExtension;
+//                $createdPage->body_image = $imageBodyfilename;
+//                $createdPage->save();
+//                $request->file('body_image')->move('images', $imageBodyfilename);
+//            }
+
+            return redirect()->route('main-page',['slug' => $slug]);
         }
 
-        return redirect()->route('wow-page',['slug' => $slug]);
+
     }
 
     public function store_page(Request $request, Page $page, $slug){
 
-            $requestData = $request->all();
-            $updatedPage = $page->findBySlug($slug);
-            $updatedPage->update($requestData);
+        $requestData = $request->all();
+        $updatedPage = $page->findBySlug($slug);
+        $updatedPage->update($requestData);
 
-            if ($request->hasFile('image')) {
+//        if ($request->get('youtube')) {
+//            $updatedPage->update(['video_status' => 1]);
+//        }
 
-                $updatedPage->image = $request->file('image')->getClientOriginalName();
-                $updatedPage->save();
-                $request->file('image')->move('images', $request->file('image')->getClientOriginalName());
-            }
+        if ($request->hasFile('image')) {
+            $imageExtension = $request->file('image')->getClientOriginalExtension(); // getting image extension
+            $imageFilename = uniqid().'.'.$imageExtension;
+            $updatedPage->image = $imageFilename;
+            $updatedPage->save();
+            $request->file('image')->move('images', $imageFilename);
 
-            if ($request->hasFile('body_image')) {
+        }
 
-                $updatedPage->body_image = $request->file('body_image')->getClientOriginalName();
-                $updatedPage->save();
-                $request->file('body_image')->move('images', $request->file('body_image')->getClientOriginalName());
-            }
+        if ($request->hasFile('body_image')) {
+            $imageBodyExtension = $request->file('body_image')->getClientOriginalExtension(); // getting image extension
+            $imageBodyfilename = uniqid().'.'.$imageBodyExtension;
+            $updatedPage->body_image = $imageBodyfilename;
+            $updatedPage->save();
+            $request->file('body_image')->move('images', $imageBodyfilename);
 
-            return redirect()->route('wow-page',['slug' => $request->slug]);
+        }
+
+        return redirect()->route('main-page',['slug' => $request->slug]);
 
     }
 
@@ -165,6 +194,11 @@ class MainController extends Controller
         return back();
     }
 
+    public function add_leeloo(Request $request, $slug, Page $page){
+        $page->findBySlug($slug)->update($request->all());
+        return back();
+    }
+
     public function changeStatusVideo(Page $page, $slug){
         $page = $page->findBySlug($slug);
         $statusVideo = $page->video_status;
@@ -172,14 +206,14 @@ class MainController extends Controller
         switch ($statusVideo){
             case 0: $page->video_status = 1;
 
-            break;
+                break;
 
             case 1: $page->video_status = 0;
                 break;
         }
 
         $page->save();
-        return back();
+        return redirect()->route('main-page',['slug' => $slug]);
     }
 
     public function reset(){

@@ -19,21 +19,21 @@
     padding-bottom: 40px;
 }
 
-.desc p{
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1.2;
-    color: #000;
-    font-size: 36px !important;
-}
-
-.main-content__desc {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 22px;
-    margin-top: 40px;
-    line-height: 30px;
+/*.desc p{*/
     /*font-weight: 400;*/
-}
+    /*text-transform: uppercase;*/
+    /*line-height: 1.2;*/
+    /*color: #000;*/
+    /*font-size: 36px !important;*/
+/*}*/
+
+/*.main-content__desc {*/
+    /*font-family: 'Fira Sans', sans-serif;*/
+    /*font-size: 22px;*/
+    /*margin-top: 40px;*/
+    /*line-height: 30px;*/
+    /*!*font-weight: 400;*!*/
+/*}*/
 
 strong {
     font-weight: 600;
@@ -44,7 +44,7 @@ strong {
     }
 
     .desc ul li {
-        font-size: 18px !important;
+        /*font-size: 18px !important;*/
     }
 
     ul {
@@ -109,14 +109,14 @@ strong {
     list-style: none;
     padding-left: 30px;
     font-family: 'Fira Sans', sans-serif;
-    font-size: 20px !important;
+    /*font-size: 20px !important;*/
     color: #000;
     padding-top: 10px;
     position: relative;
 }
 
 .desc ul li:after {
-    top: 15px;
+    top: 35px;
     content: "";
     position: absolute;
     left: 0;
@@ -204,4 +204,185 @@ strong {
         font-size: 14px !important;
     }
 
+}
+
+
+
+
+@font-face {
+    font-family: FiraSansBlack; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Black.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBoldItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-BoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBook; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Book.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBookItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-BookItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansEight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Eight.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansEightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-EightItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraBold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraBoldItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraBoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraLight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLight.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraLightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLightItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSansBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+/*new*/
+@font-face {
+    font-family: FiraSans-BoldItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-BoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Book; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Book.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-BookItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-BookItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Eight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Eight.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraLightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLightItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-EightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-EightItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraBold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraBoldItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraBoldItalic.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-ExtraLight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLight.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-ExtraLightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ExtraLightItalic.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-Four; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Four.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-FourItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-FourItalic.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: FiraSans-Hair; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Hair.otf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-HairItalic;/* Имя шрифта */
+    src: url(../fonts/FiraSans-HairItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Heavy; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Heavy.otf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-HeavyItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-HeavyItalic.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Italic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Italic.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: FiraSans-Light; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Light.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-LightItalic;/* Имя шрифта */
+    src: url(../fonts/FiraSans-LightItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Medium; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Medium.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-MediumItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-MediumItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Regular; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+@font-face {
+    font-family: FiraSans-SemiBold; /* Имя шрифта */
+    src: url(../fonts/FiraSans-SemiBold.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-SemiBoldItalic;/* Имя шрифта */
+    src: url(../fonts/FiraSans-SemiBoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Thin; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Thin.ttf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-ThinItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-ThinItalic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-Two; /* Имя шрифта */
+    src: url(../fonts/FiraSans-Two.otf); /* Путь к файлу со шрифтом */
+}
+
+
+@font-face {
+    font-family: FiraSans-TwoItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-TwoItalic.otf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-Ultra;/* Имя шрифта */
+    src: url(../fonts/FiraSans-Ultra.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-UltraItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-UltraItalic.otf); /* Путь к файлу со шрифтом */
+}@font-face {
+    font-family: FiraSans-UltraLight; /* Имя шрифта */
+    src: url(../fonts/FiraSans-UltraLight.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: FiraSans-UltraLightItalic; /* Имя шрифта */
+    src: url(../fonts/FiraSans-UltraLightItalic.otf); /* Путь к файлу со шрифтом */
 }

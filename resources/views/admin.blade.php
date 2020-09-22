@@ -3,10 +3,9 @@
 @include('layouts.chank.header')
 
 @section('title', 'Users | Lara Admin')
-
 @section('content_header')
-    <a class="btn btn-primary float-right" href="{{route('page')}}">Create page</a>
-    <h1>Pages</h1>
+    <a class="btn btn-primary float-right" href="{{route('page')}}">Создать страницу</a>
+    <h1>Список страниц</h1>
 @stop
 
 @section('content')
@@ -19,13 +18,11 @@
                     <table id="laravel_datatable" class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Slug</th>
-                            <th>Details</th>
-                            <th>Current template</th>
-                            <th>Change layout</th>
-                            <th>Add video</th>
-                            <th>Status video</th>
+                            <th></th>
+                            <th>Слаг</th>
+                            <th>Детали</th>
+                            <th>Добавить LeeLoo</th>
+                            <th>Изменить вид страницы</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,64 +32,58 @@
                                 <td>{{ $page->id }}</td>
                                 <td>{{ $page->slug }}</td>
                                 <td>
-                                        <a href="{{route('wow-page',['slug' => $page->slug])}}" class="btn btn-primary text-center">Show</a>
-                                        <a href="{{route('edit-page',['slug' => $page->slug])}}" class="btn btn-info text-center">Edit</a>
-                                        <a href="{{route('delete-page',['slug' => $page->slug])}}" class="btn btn-danger text-center">Delete</a>
+                                        <a href="{{route('main-page',['slug' => $page->slug])}}" class="btn btn-primary text-center">Показать</a>
+                                        <a href="{{route('edit-page',['slug' => $page->slug])}}" class="btn btn-info text-center">Редактировать</a>
+                                        <a href="{{route('delete-page',['slug' => $page->slug])}}" class="btn btn-danger text-center">Удалить</a>
                                 </td>
 
                                 <td>
-                                    <span>{{$page->templates->name}}</span>
+                                    @if($page->leeloo_id)
+                                    <button id="{{$page->id}}" class="btn btn-success text-center" data-toggle="modal" data-target="#leeLooModal{{$page->id}}">Добавить</button>
+                                    @else
+                                        <button id="{{$page->id}}" class="btn btn-secondary text-center" data-toggle="modal" data-target="#leeLooModal{{$page->id}}">Добавить</button>
+                                    @endif
+
+
+                                        <form method="post" action="{{route('add-leeloo',['slug' => $page->slug])}}">
+                                            {{ csrf_field() }}
+                                            <div id="leeLooModal{{$page->id}}" class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <span>Копируйте leeloo_id в input</span>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="text" name="leeloo_id" placeholder="Копируйте сюда id LeeLoo" class="form-control" required>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                                            <button id="{{$page->id}}" class="btn btn-info text-center" type="submit">Сохранить</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </form>
+
                                 </td>
                                 <td>
 
                                     <form action="{{route('update-template',['slug' => $page->slug])}}" method="post">
                                         {{ csrf_field() }}
-                                        <input type="hidden" name="template_id" class="template_id" id="{{$page->id}}">
                                         <input type="hidden" name="layout_id" class="layout_id" id="{{$page->id}}">
 
-                                            <select id="{{$page->id}}" class="my-select show-tick col-md-7" data-live-search="true" data-style="btn-info">
-                                                @foreach($layouts as $layout)
-                                                    <option id="{{$layout->getTemplate->first()->id}}" title="{{$layout->getTemplate->first()->name}}" data-layout="{{$layout->id}}" {{ ($layout->id == $page->pageHasLayout->id ? "selected":"") }}>{{$layout->description}}</option>
-                                                @endforeach
-                                            </select>
-
-                                        <button id="{{$page->id}}" class="btn btn-primary text-center float-right save" type="submit" disabled>Save</button>
+                                        <select id="{{$page->id}}" class="my-select show-tick col-md-7" data-live-search="true" data-style="btn-info">
+                                            @foreach($layouts as $layout)
+                                                <option id="{{$layout->id}}" data-layout="{{$layout->id}}" {{ ($layout->id == $page->pageHasLayout->id ? "selected":"") }}>{{$layout->description}}</option>
+                                            @endforeach
+                                        </select>
+                                        <button id="{{$page->id}}" class="btn btn-primary text-center float-right save" type="submit" disabled="">Сохранить</button>
                                     </form>
 
                                 </td>
-                                <td>
 
-                                    <button id="{{$page->id}}" class="btn btn-info text-center" data-toggle="modal" data-target="#exampleModalCenter{{$page->id}}">Add</button>
-                                    <form method="post" action="{{route('add-video',['slug' => $page->slug])}}">
-                                        {{ csrf_field() }}
-                                        <div id="exampleModalCenter{{$page->id}}" class="modal fade" role="dialog">
-                                            <div class="modal-dialog">
-
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <span>Copy link to input</span>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <input type="text" name="youtube" placeholder="Link video" class="form-control" required>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                        <button id="{{$page->id}}" class="btn btn-info text-center" type="submit">Save</button>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </form>
-                                </td>
-                                <td>
-                                    @if($page->video_status == 0)
-                                            @php($status = 'On')
-                                        @else
-                                            @php($status = 'Off')
-                                    @endif
-                                    <a href="{{route('status-video',['slug' => $page->slug])}}" id="{{$page->id}}" class="btn btn-success text-center" role="button">{{$status}}</a>
-                                </td>
                             </tr>
                         @endforeach
 
@@ -109,6 +100,15 @@
         $(document).ready( function () {
             $('#laravel_datatable').DataTable({ "paging": true,
                 "lengthChange": false,
+                "language": {
+                    search: 'Поиск по страницам',
+                    searchPlaceholder: 'Введите слово и enter',
+                    info : 'Показаны с _START_ по _END_ страницу из _TOTAL_',
+                    paginate: {
+                        "next":       "Следующая",
+                        "previous":   "Предыдущая"
+                    }
+                },
                 "searching": true,
                 "ordering": true,
                 "info": true,
@@ -132,5 +132,12 @@
         $('.container-fluid').addClass('added-class');
         $('.wrapper').addClass('added-class');
 
+
+        var maxLength = 15;
+        $('.my-select > option').text(function(i, text) {
+            if (text.length > maxLength) {
+                return text.substr(0, maxLength) + '...';
+            }
+        });
     </script>
 @stop

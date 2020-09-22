@@ -4,8 +4,10 @@
 <head>
     <title>Bioolive</title>
 @include('layouts.chank.header')
-@include('layouts.chank.navbar')
 <!--meta-->
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
     <meta charset="utf-8">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#ffffff">
@@ -18,8 +20,8 @@
           content="НОВЫЙ УНИКАЛЬНЫЙ ЭКОПРОЕКТ, СОЕДИНЯЮЩИЙ ТРАДИЦИОННЫЙ БИЗНЕС С НОВЫМИ ТЕХНОЛОГИЯМИ.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--favicon-->
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/favicon/apple-icon.png">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-icon.png">
 
     <!--style-->
     <link rel="stylesheet" href="/css/app.bio.min.css">
@@ -64,7 +66,7 @@
     </script>
     <script>
         window.LEELOO = function () {
-            window.LEELOO_INIT = {id: '5dc53308750c5e000c15a678'};
+            window.LEELOO_INIT = {id: '{{$info->leloo_id}}'};
             var js = document.createElement('script');
             js.src = 'https://app.leeloo.ai/init.js';
             js.async = true;
@@ -75,7 +77,261 @@
     <!-- end leeloo init code -->
 
     <script>window.LEELOO_LEADGENTOOLS = (window.LEELOO_LEADGENTOOLS || []).concat('r2lsie');</script>
+    <style>iframe{ max-width: 100% !important;}
 
+        .row{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .wrapper.pre-sale{
+            padding-left: 250px;
+        }
+
+        .main-content{
+            margin-top: 20px;
+        }
+        .social{
+            margin-top: 20px;
+        }
+
+        .main-image{
+            margin-top: 0 !important;
+        }
+
+        .main-container:after, .pre-sale:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 250px;
+            display: block;
+            z-index: 2;
+        }
+        .pre-sale .main-container:after {
+            left: 0px;
+            background: url("/images/left-side.svg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .pre-sale:before {
+            background: none;
+        }
+
+        /*.main-container:after, .pre-sale:before {*/
+        /*content: "";*/
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*bottom: 0;*/
+        /*width: 29px;*/
+        /*display: block;*/
+        /*z-index: 2;*/
+        /*}*/
+        /*.pre-sale .main-container:after {*/
+        /*left: 50px;*/
+        /*background: rgba(120,142,46,.89);*/
+        /*}*/
+
+        .valentine-logo{
+            margin-bottom: 0;
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-size: 30px;
+            line-height: 30px;
+            /*background-color: #fcf4f4;*/
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            font-size: 22px;
+            line-height: 30px;
+            /*background-color: #fcf4f4;*/
+            margin-bottom: 20px;
+        }
+
+        .description {
+
+            font-size: 20px;
+            line-height: 30px;
+            /*background-color: #fcf4f4;*/
+        }
+
+        .description::first-letter{
+            text-transform: capitalize;
+        }
+
+        .description ul li{
+            font-size: 16px;
+        }
+
+        .social-image{
+            display: none;
+        }
+
+        .description ul li::first-letter{
+            text-transform: capitalize;
+        }
+
+        ul {
+            padding-left: 10px;
+            margin-top: 35px;
+            list-style: none;
+        }
+
+        ul li{
+
+            padding-left: 18px;
+            font-weight: 400;
+            color: #000;
+            position: relative;
+        }
+
+        ul li:after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background: #acca34;
+        }
+
+        .orange{
+            color: #808C09;
+            font-weight: 900;
+        }
+
+        .blue{
+            color: #9C0000;
+            font-weight: 900;
+        }
+
+        .title-mobile{
+            display: none !important;
+        }
+
+        @media screen and (max-width:768px) {  /*mobile*/
+
+            .main-content{
+                margin-top: 0;
+            }
+
+            .pre-sale:before {
+                left: 79px;
+                background: rgba(120, 142, 46, .56);
+                width: 30px;
+            }
+
+            .lgt-title {
+                font-size: 14px;
+            }
+
+            .lgt-call-to-action {
+                margin: 0;
+            }
+
+
+            .wrapper.pre-sale {
+                padding-left: 50px;
+            }
+
+            .title-mobile{
+                font-size: 25px;
+                text-transform: uppercase;
+                display: block !important;
+            }
+
+            .title{
+                display: none !important;
+            }
+
+            /*.main-container:after, .pre-sale:before {*/
+            /*content: "";*/
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*bottom: 0;*/
+            /*!*width: 50px;*!*/
+            /*display: block;*/
+            /*z-index: 2;*/
+            /*}*/
+            /*.pre-sale .main-container:after {*/
+            /*left: 0px;*/
+            /*background: url("/images/left-side.svg");*/
+            /*background-size: 100% 100%;*/
+
+            /*}*/
+
+            /*.pre-sale:before {*/
+            /*background: none;*/
+            /*}*/
+
+            .main-container:after, .pre-sale:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 15px;
+                display: block;
+                z-index: 2;
+            }
+            .pre-sale .main-container:after {
+                left: 15px;
+                background: rgba(120,142,46,.89);
+            }
+
+            .pre-sale:before {
+                left: 30px;
+            }
+
+            .pre-sale:before {
+                width: 15px;
+            }
+
+        }
+
+
+        @media screen and (max-width:1300px) {
+            .main-image>img{
+                max-height: 480px;
+            }
+        }
+
+        @media screen and (max-width:1100px) {  /*big resize*/
+
+
+            .pre-sale .main-container:after {
+                left: 20px;
+                /*left: 0px;*/
+            }
+
+            .social-image{
+                display: block !important;
+            }
+
+            .main-content{
+
+            }
+            .main-image{
+
+            }
+
+            .title-mobile{
+                font-size: 30px;
+                text-transform: uppercase;
+                display: block !important;
+            }
+
+            .title{
+                display: none !important;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -96,45 +352,21 @@
 <div class="wrapper">
     <div class="container">
         <div class="main-info">
+
+            <div class="row">
+                <div class="col">
+                    <div class="valentine-logo" style="margin-bottom: 20px">
+                        <img src="/images/logo.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+
             <div class="desc">
-                <div class="valentine-logo">
-                    <img src="../images/logo.png" alt="logo">
-                </div>
-                <div class="main-content__desc">
-                    <b>BioDeposit</b> успешно развивается с 2018 года, урожай и первые дивиденды близко.
-                    <br>
-                    <br>
-                    Заложите фундамент своего финансового благополучия — покупайте оливковые деревья на плантациях в Грузии и
-                    получайте ежегодный пассивный доход с продажи урожая.
-                    <br>
-                    <br>
-                    Деревья первой посадки успешно распроданы, объявляем старт продаж деревьев второй посадки!
-                    Оливы <b>2020</b> года уже на плантациях — приобретая их одним из первых, Вы участвуете в розыгрыше.
-                    <br>
-                    <br>
-                    <strong>Чем больше деревьев — тем больше шансов выиграть!</strong>
-                </div>
-                <ul>
-                    <li>
-                        Больше подробностей о проекте.
-                    </li>
-                    <li>
-                        Как участвовать в розыгрыше деревьев 2020 года посадки.
-                    </li>
-                    <li>
-                        Технические и юридические гарантии, сроки окупаемости.
-                    </li>
-                    <li>
-                        Как это может быть полезно Вам и планете одновременно.
-                    </li>
-                    <li>
-                        Как происходит формирование цены на деревья и оливковое масло
-                    </li>
-                </ul>
+                <div class="col title">{!! $info->title !!}</div>
+                <div class="col subtitle">{!! $info->text !!}</div>
+                <div class="col description desc">{!! $info->description !!}</div>
             </div>
-            <div class="social-image">
-                <img src="../images/main-img-tree.jpg" alt="" width="1167" height="704">
-            </div>
+
             <div class="social">
                 <div class="social-link">
                     <div class="wepster-hash-r2lsie" onclick="fbq('track', 'Subscribe');
@@ -146,60 +378,51 @@
                     </p>
                 </div>
             </div>
+
         </div>
         <div class="main-image">
-            <img src="../images/main-img-tree.jpg" alt="" width="1167" height="704">
+            <img src="../images/{{$info->image}}" alt="" width="1167" height="704">
+            {{--@if($info->youtube)--}}
+            {{--@if($info->video_status == 1)--}}
+            {{--<div class="col-md-12 text-center" style="margin-top: 20px">--}}
+            {{--@youtube($info->youtube, ['width'=>560, 'height'=>315])--}}
+            {{--</div>--}}
+            {{--@endif--}}
+            {{--@endif--}}
         </div>
+
     </div>
+
     <div class="privacy-policy__link">
         <a href="/privacy-policy.html" target="_blank">
             Политика конфиденциальности
         </a>
     </div>
 </div>
+<script>
+    $('.wrapper').css('backgroundImage','url(/images/{{$info->body_image}})')
+
+    let patterns = [
+        {text: "BioDeposit", classes: ['orange']},
+        {text: "акционные цены", classes: ['orange']},
+        {text: "цена после акции", classes: ['blue']},
+        {text: "акция", classes: ['blue']},
+    ];
 
 
-{{--<div class="wrapper">--}}
-{{--<div class="container-fluid">--}}
+    const marker = ( text, patterns ) => {
+        return patterns.reduce( ( result, current ) => {
+            let regexp = new RegExp(current.text, 'g');
+            let style = current.classes.join(' ');
 
+            return result.replace( regexp, `<span class="${ style }">${ current.text }</span>` );
+        }, text );
+    }
 
-{{--<div class="row" style="padding-top: 100px">--}}
+    let text = document.body.innerHTML;
 
-{{--<div class="col-md">--}}
-{{--<div class="desc" style="padding-top: 60px">--}}
-{{--<div class="logo"> <img src="{{'images/logo.png'}}" style="max-width: 45%; padding-left: 60px"></div>--}}
-{{--<div class="titls" style="padding-top: 50px; padding-left: 60px">--}}
-{{--{!! $info->title !!}--}}
-{{--</div>--}}
-
-{{--<div class="main-content__desc col-md" style="padding-left: 60px">--}}
-{{--<br>--}}
-{{--{!! $info->description !!}--}}
-{{--</div>--}}
-{{--</div>--}}
-
-{{--</div>--}}
-{{--<div class="col-md main-image" style="padding-top: 50px">--}}
-{{--<img src="{{'images/main-img-tree.jpg'}}" style="width: 100%">--}}
-{{--</div>--}}
-
-{{--@if($info->video_status == 1)--}}
-{{--<div class="col-md-12 text-center" style="margin-top: 20px">--}}
-{{--@youtube($info->youtube, ['width'=>560, 'height'=>315])--}}
-{{--</div>--}}
-{{--@endif--}}
-
-{{--<div class="col-md-12">--}}
-{{--<a href="/privacy-policy.html" target="_blank">--}}
-{{--Политика конфиденциальности--}}
-{{--</a>--}}
-{{--</div>--}}
-
-{{--</div>--}}
-{{--</div>--}}
-{{--</div>--}}
-
-
+    document.body.innerHTML = marker( text, patterns );
+</script>
 
 </body>
 </html>

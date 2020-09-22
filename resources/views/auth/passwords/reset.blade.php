@@ -9,7 +9,7 @@
     @php( $password_reset_url = $password_reset_url ? url($password_reset_url) : '' )
 @endif
 
-@section('auth_header', __('adminlte::adminlte.password_reset_message'))
+@section('auth_header', 'Поменять пароль')
 
 @section('auth_body')
 
@@ -21,7 +21,7 @@
         <div class="input-group mb-3">
             <input type="password" name="password"
                    class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}"
-                   placeholder="{{ __('adminlte::adminlte.password') }}">
+                   placeholder="Введите новый пароль">
             <div class="input-group-append">
                 <div class="input-group-text">
                     <span class="fas fa-lock {{ config('adminlte.classes_auth_icon', '') }}"></span>
@@ -38,7 +38,7 @@
         <div class="input-group mb-3">
             <input type="password" name="password_confirmation"
                    class="form-control {{ $errors->has('password_confirmation') ? 'is-invalid' : '' }}"
-                   placeholder="{{ trans('adminlte::adminlte.retype_password') }}">
+                   placeholder="Повторить пароль">
             <div class="input-group-append">
                 <div class="input-group-text">
                     <span class="fas fa-lock {{ config('adminlte.classes_auth_icon', '') }}"></span>
@@ -54,7 +54,7 @@
 
         <button type="submit" class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}">
             <span class="fas fa-sync-alt"></span>
-            {{ __('adminlte::adminlte.reset_password') }}
+            Сохранить новый пароль
         </button>
 
     </form>
